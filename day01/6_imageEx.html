@@ -7,13 +7,14 @@
     <title>Document</title>
     <style>
         p{
-            background-repeat: no-repeat;
-            color: blue;
+            background-repeat: no-repeat;       /* 배경 반복 할지 말지 */
+            color: blue;                      /* 글자 색 */
+            
         }
         body {
             background-image: url('../images/marvel2.jpg');
-            background-repeat: repeat-y;  /* 백그라운드 이미지가 화면보다 작을때 반복하는 방법 설정 */
-            background-attachment: fixed; /* 내용이 길어서 스크롤 될때 백그라운드 이미지 스크롤 여부 설정 */
+            background-repeat: repeat-y;  /* 백그라운드 이미지가 화면보다 작을때 반복하는 방법 설정 -> x는 가로로 y는 세로로 */
+            background-attachment: fixed; /* 내용이 길어서 스크롤 될때 백그라운드 이미지 스크롤 여부 설정  -> 배경 고정 or not*/
             background-size: cover;   /*백그라운드 이미지 크기가 브라우저의 최대크기와 동일하게 설정.background-repeat 동작 안함 */
         }
     </style>
