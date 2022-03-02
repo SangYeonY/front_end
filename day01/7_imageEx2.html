@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+                  <!-- 현재 웹문서의 favorite icon 설정 : 문서제목, 북마크에 적용됩니다. -->
+                  <link rel="icon" type = "image/x-icon" href="../images/favi.ico">
+</head>
+<body>
+    <!-- https://www.w3schools.com/html/html_images_picture.asp
+ -->
+ <h2>The picture Element</h2>
+
+<picture>
+  <source media="(min-width: 650px)" srcset="../images/spiderman2.jpg">
+  <source media="(min-width: 465px)" srcset="../images/spiderman3.jpg">
+  <img src="../images/spiderman1.jpg" style="width:auto;">
+</picture>
+
+<p>
+    반응형 웹 (responsive web)이란 하나의 웹사이트로 데스크탑 PC, 스마트폰, 태블릿 PC 등 접속하는
+    디스플레이의 종류에 따라 화면의 크기가 자동으로 변하도록 만든 웹 페이지를 말합니다.<br>
+    위의 picture 태그는 화면 크기에 따라 보이는 이미지를 다르게 합니다. 
+    화면크기(viewport)가 650픽셀보다 이상은 첫번째 이미지 , 
+    465보다크고 650보다 작을때는 두번째 이미지, 465 이하일때는 세번째 이미지입니다.<br>
+
+    Resize the browser to see different versions of the picture loading at different viewport sizes.
+The browser looks for the first source element where the media query matches the user's current viewport width,
+and fetches the image specified in the srcset attribute.</p>
+
+<p>The img element is required as the last child tag of the picture declaration block.
+The img element is used to provide backward compatibility for browsers that do not support the picture element, 
+or if none of the source tags matched.
+</p>
+
+</body>
+</html>
