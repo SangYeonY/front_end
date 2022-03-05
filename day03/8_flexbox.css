@@ -1,0 +1,42 @@
+body{
+    padding: 0px;
+    margin-top: -20px;
+    margin-left: 0px;
+}
+.container{
+    background-color: brown;
+    width: 100%;
+    padding: 12px 15px;
+    top: 0px;
+    display: flex;
+    /*flex-direction: row; */
+    justify-content: center;
+}
+.container > li {   /* container 클래스 요소의 자식태그 li */
+list-style: none;
+padding: 8px 12px;
+margin: 8px 12px;
+font-size: 1.2em;
+}
+main{
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-top: 8rem;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+    .container > li:hover{
+        background-color: coral;
+        border-radius: 4px;
+    }
+@media screen and (max-width:768px) {
+    .container{
+        flex-direction: column;
+    }
+    .container >li{
+        text-align: center;
+    }
+}

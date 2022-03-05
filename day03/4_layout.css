@@ -1,0 +1,42 @@
+div.static{ /* static 위치 요소는 top,bottom,left,right 속성의 영향을 받지 않는다. */
+    position: static;
+    border: 3px solid #73AD21;
+}
+div.relative {  /* 상대적으로 배치된 요소의 top, right, bottom, left 속성을 설정하면 원래 위치에서 멀어지게 조정됩니다. 
+    다른 콘텐츠는 요소에 의해 남겨진 간격에 맞게 조정되지 않습니다. */
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border: 8px solid #a76713;
+    margin: 30px;
+  } 
+
+div.fixed{  /* 페이지가 스크롤되더라도 항상 같은 위치에 유지됩니다. top, right, bottom, left 속성은 요소의 위치를 ​​지정하는 데 사용됩니다.
+    고정 요소는 일반적으로 위치했을 페이지에 공백을 남기지 않습니다.
+    페이지의 오른쪽 하단 모서리에 있는 고정된 요소를 확인하십시오. */
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    border: 3px solid #2d1e3d;
+}
+div.absolute {  /* 가장 가까운 위치에 있는 조상을 기준으로 배치됩니다(고정처럼 뷰포트를 기준으로 배치되는 대신).
+    하지만,절대 위치 요소에 위치 지정 조상이 없으면 문서 본문을 사용하고 페이지 스크롤과 함께 이동합니다.
+    참고: 절대 위치 요소는 일반 흐름에서 제거되며 요소와 겹칠 수 있습니다. */
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    border: 3px solid #0c7fa1;
+  }
+  div.sticky {  /* 사용자의 스크롤 위치를 기준으로 배치됩니다.
+
+    고정 요소 는 스크롤 위치에 따라 relative및 사이를 전환합니다.
+    fixed주어진 오프셋 위치가 뷰포트에서 만날 때까지 상대적으로 배치된 다음 제자리에 "고정"됩니다(예: position:fixed). */
+    position: sticky;
+    top: 0;
+    padding: 5px;
+    background-color: #a1ca55;
+    border: 2px solid #4c4eaf;
+  }
