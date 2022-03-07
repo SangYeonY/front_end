@@ -26,11 +26,22 @@
             yn = confirm(your_animal + '계속할까요?')   /* yn변수는 true 또는 false 입니다. */
             console.log(yn);
             /* document.write(your_animal);     웹문서를 새롭게 작성합니다. */ 
-            document.getElementById('animal').innerHTML = your_animal;
+            /* 웹문서의 출력 내용을 변경합니다. */
+            document.getElementById('animal').innerHTML = your_animal;  /* id 속성값으로 animal은 1개 요소만 지정되어야 합니다.
+                                                                            2개 이상일때 오류발생은 안해요. 그러나 처음1개만 적용. */
+        }
+        function your_info3(){
+            var age;
+            age = prompt('당신의 나이는?')
+            var yn = confirm("출력할까요?")
+            if(yn == true){
+                document.getElementById('age').innerHTML = age; 
+            }
         }
     </script>
     <p>
-        입력하신 반려동물 이름은 <span id="animal">???</span> 입니다.
+        입력하신 반려동물 이름은 <span id="animal">???</span> 입니다.<br>
+        당신의 나이는 <span id="age">???</span>입니다.
         <!-- 자바스크립트 javascript : 웹브라우저에서 실행되는 언어입니다.
             컴파일(파일단위로 번역) 과정이 없고 명령을 하나씩 번역(인터프리터언어)하는 형식(script)
             199X 년도에 네스케이프 브라우저에서 개발 -> 구글에서 발전시킴.(표준화,규격화) -> 많이 쓰이고 있음.
@@ -41,6 +52,6 @@
             *자바의 객체개념. 자바의 객체에 포함된 메소드 또는 속성(전역변수) 에 대한 개념이 동일하게 적용됩니다.
             location.href 는 location 객체의 href 속성입니다.
          -->
-    </p>
+    </p> 
 </body>
 </html>
