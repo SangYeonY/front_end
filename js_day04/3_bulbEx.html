@@ -7,12 +7,18 @@
     <title></title>
 </head>
 <body>
-    <h3>자바스크립트 활용 : HTML태그의 속성값 변경</h3>
-    <p>img 태그 src 속성값을 변경하여 문서에 표시되는 이미지를 바꿉니다. innerHTML은 요소의 태그사이 컨텐츠를 변경합니다.</p>
-    <h4>현재상태 : <span id = "onoff">OFF</span></h4>
+    <h3>자바스크립트 기본 활용</h3>
+    <p>
+        <ul>
+            <li>태그의 컨텐츠 변경 : innerHTML</li>
+            <li>태그의 컨텐츠 변경 : 예를 들면 img 태그의 src속성값 변경</li>
+            <li>태그의 컨텐츠 변경 : 예를 들면 글꼴의 색상변경하기</li>
+        </ul>
+    </p>
+    <h4>현재상태 : <span id = "onoff" style="color : blue">OFF</span></h4>   <!-- 텍스트 'ON'과 'OFF' 바꾸기 -->
     <hr>
     <button onclick="bulbOn()">불을 켜주세요.</button>
-    <img src="../images/pic_bulboff.gif" alt="light" style="width: 100px; cursor: pointer;" id ="picBulb" onclick="bulbToggle()">
+    <img src="../images/pic_bulboff.gif" alt="light" style="width: 100px; cursor: pointer;" id ="picBulb" onclick="bulbToggle()">   <!-- onclick 은 마우스를 누른 이벤트 -->
     <button onclick="bulbOff()">불을 꺼주세요.</button>
     <script>
         const img =  document.getElementById('picBulb');
@@ -21,10 +27,12 @@
         function bulbToggle(){
             // 현재 그림상태에 따라 번갈아가며 바꿔줍니다. bulbOn(), bulbOff() 함수 활용하세요.
             // 다 되면 파일 보내기.
-           if(state == true){
+           if(state){   //state==true, 불이 켜진상태?
                bulbOff()
-           }else{
+               state = false;   // 불꺼짐 상태로 변경
+           }else{       // 불이 꺼진 상태
                bulbOn()
+               state = true;
            }
 
         }
@@ -33,7 +41,7 @@
            img.src = "../images/pic_bulbon.gif";
            state = true;
            state_label.innerHTML="ON";
-
+           onoff.style.color='green';
         }
 
         function bulbOff(){
@@ -41,6 +49,7 @@
             img.src = "../images/pic_bulboff.gif";
             state_label.innerHTML="OFF";
             state =false;
+            onoff.style.color='blue';
         }
     </script>
 </body>
