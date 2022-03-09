@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      table{
+          width: 50%;
+      }
+     
+      td{
+          border: 1px solid orangered;
+          padding: 7px 1px;
+          text-align: center;
+      }
+      th{
+          background-color: tomato;
+          color: white;
+          padding: 1px 1px;
+          text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>TIME</th>
+            <th>TODO</th>
+        </tr>
+        <tbody id = "contents"></tbody>
+
+
+        <script>
+        const time = ['09:00','11:00','12:30','14:00','16:45']
+        const todo = ['수업', '과제','점심식사','주간회의','자료조사']
+            // 객체의 배열
+        const schedule = [{time:'09:00',todo:'수업'},
+                          {time:'11:00',todo:'과제'},
+                          {time:'12:30',todo:'점심식사'},
+                          {time:'14:00',todo:'주간회의'},
+                          {time:'16:45',todo:'자료조사'}]
+        // ????
+        let _schedule = ''
+            schedule.forEach(function(value){                   // value의 타입이 object -> 프로퍼티 time,todo
+                _schedule += `<tr><td>${value.time}</td><td>${value.todo}</td></tr>`;
+            })
+            
+            document.getElementById('contents').innerHTML = _schedule  
+
+    /*     schedule.sort(function(a,b){    // a,b 는 객체타입 변수
+        return a.time-b.time
+})
+        console.log(schedule); */
+         
+
+
+        function add_schedule(){
+            // prompt 이용해서 시간과 할일을 각각 입력받기
+            let atime = prompt('시간을 입력하세요.')
+            let atodo = prompt('할일을 입력하세요.')
+            // 입력받은 내용으로 scheule 배열에 추가하기
+            schedule.push({time:atime,todo:atodo})      // 배열에 새로운 객체 항목을 추가
+            // tbody 안에 원래 내용은 ''로 비우고 새로 변경된 배열로 tr태그를 넣어줍니다.
+            //???
+           
+
+
+
+
+        }
+
+        </script>
+    </table>
+    <button onclick="add_schedule()">일정추가하기</button>
+</body>
+</html>
