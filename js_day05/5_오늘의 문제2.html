@@ -48,7 +48,8 @@
         })
         document.getElementById('contents').innerHTML = _schedule;
         */
-        set_tbody();        //함수 호출
+        set_tbody();        //함수 호출 : 함수정의가 뒤에 있어도 호출에 오류가 없습니다.
+                            //    ㄴ var, function 은 JS가 선언부분을 맨 앞으로 올린다. (hoisting)
 
         //함수사용2) 반복해서 사용된 코드(명령들.)를 함수로 정의하여 재사용한다.(함수 호출)
         function set_tbody(){       //함수이름은 식별자(프로그래머가 이해할수 있는 단어로 만듭니다.)
