@@ -17,7 +17,7 @@
                 return x*11 + 12        // 리턴이 있습니다.
             }       // 등호 오른쪽이 함수의 리터럴입니다.
 
-            const va1 = 123;            // 123이 정수값 리터럴
+            //const va1 = 123;            참고 리터럴이란?  123이 정수값 리터럴로 데이터 그 자체
 
             // 함수 호출.   - 위의 함수 식별자(변수)로 호출합니다.
             let result = myfunc1(10);   // 함수 실행 후 리턴값은 result 변수에 저장합니다.
@@ -37,20 +37,25 @@
 
             result = myfunc2(10);           // myfunc2가 함수이름이면서 생략된 식별자(변수)
             console.log('result : ' + result)
-            // 3. 화살표 함수의 사용. 인자를 받아서 리턴값 전달할 때 사용.
+             // 3. 화살표 함수의 사용. 인자를 받아서 리턴값 전달할 때 사용.
            
            
             const myfunc3 = (x) => x*11 + 12;       // myfunc1과 리턴하는 수식이 동일.
-            console.log('result :' + myfunc3(10))   // 리턴값이 있을 때 변수 사용하지 않고 출력
+            console.log('myfunc3 result :' + myfunc3(10))   // 리턴값이 있을 때 변수 사용하지 않고 출력
 
 
 
 
             const myfunc4 = (y) => {
-                console.log('myfunc2와 동일하게 동작합니다.')
+                console.log('myfunc4 :myfunc2와 동일하게 동작합니다.')
                 return y*11-12;
             };  // 화살표 함수에서 실행명령이 여러개이면 { } 사용.
             console.log('result : ' + myfunc4(10));
+
+            const myfunc5 = (x) => console.log('myfunc5 x : ' + x);
+
+            myfunc5(999);
+            console.log(myfunc5(999));      //myfunc5 실행 그 후 리턴값이 없으므로 undefined 출력
          </script>
 
 
