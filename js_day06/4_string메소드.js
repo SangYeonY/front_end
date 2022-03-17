@@ -45,7 +45,7 @@ padStart()  : 예제 참고
 padEnd() : 예제 참고
 charAt(index) : index위치의 문자 구하기, 
      - 자바스크립트에서는 문자열을 배열처럼 다룰수 있음. [] 안에 인덱스지정 가능.
-split() : 문자열 나누기(구분기호 사용)
+split() : 문자열 나누기(구분기호 사용) -> 배열로 변환
 문자열검색 메소드 : 사용형식은 자바와 동일.
 String indexOf()
 String lastIndexOf()
